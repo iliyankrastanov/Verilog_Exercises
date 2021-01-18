@@ -12,7 +12,7 @@ initial shift_reg = 8'b0;
   always@(valid_in)
 begin
 
-  shift_reg <= {4{shift_reg[7:1], data_in[7:0]}};
+  shift_reg <= {shift_reg, data_in};
 
 end
 wire data_out;
