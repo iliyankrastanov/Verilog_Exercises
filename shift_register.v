@@ -16,7 +16,7 @@ begin
 
 end
 wire data_out;
-  assign data_out[31:0] = shift_reg[7];
+  assign data_out = shift_reg;
 
 
 endmodule
