@@ -6,7 +6,7 @@ module shift_register(data_out, data_in, valid_in, clk);
   input [7:0] valid_in;
   output [31:0]data_out;
 
-  reg[7:1] shift_reg;
+  reg[31:0] shift_reg;
 
 initial shift_reg = 8'b0;
   always@(valid_in)
