@@ -1,21 +1,22 @@
 
-module shift_register(data_out, data_in, clk);
+module shift_register(data_out, data_in, valid_in, clk);
 
-input data_in;
-input clk;
-output data_out;
+  input clk;
+  input [7:0] data_in;
+  input [7:0] valid_in;
+  output [31:0]data_out;
 
-  reg[31:0] shift_reg;
+  reg[7:1] shift_reg;
 
-initial shift_reg = 32'b0;
-always@(posedge clk)
+initial shift_reg = 8'b0;
+  always@(posedge clk & valid_in)
 begin
 
-  shift_reg <= {shift_reg[31:0], data_in};
+  shift_reg <= {shift_reg[7:1], data_in};
 
 end
 wire data_out;
-assign data_out = shift_reg[31];
+  assign data_out[31:0] = shift_reg[7];
 
 
 endmodule
