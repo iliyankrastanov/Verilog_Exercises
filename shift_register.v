@@ -8,7 +8,7 @@ module shift_register(data_out, data_in, valid_in, clk);
 
   reg[31:0] shift_reg;
 
-initial shift_reg = 8'b0;
+initial shift_reg = 32'b0;
   always@(valid_in)
 begin
 
