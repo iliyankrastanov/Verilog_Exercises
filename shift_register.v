@@ -19,12 +19,13 @@ end
 wire data_out;
 assign data_out = shift_reg;
 
-  always @(posedge clk or valid_in)
+  always @(valid_in)
     begin
-	    if (clk)
-		    shift_reg <= 32'b0;
-	    else
+	    if (valid_in)
 		    shift_reg <= shift_reg + 1;
+		  
+	    else
+		     shift_reg <= 32'b0;
         end
 wire valid_fifo;
 assign valid_fifo = {4{shift_reg}};
