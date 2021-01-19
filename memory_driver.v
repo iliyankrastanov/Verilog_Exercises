@@ -1,4 +1,4 @@
-module memory_driver( input clk, rst, input[31:0] data_in, output reg write, addr, output stop, output reg memory_full);
+module memory_driver( input clk, rst,valid_fifo1 input[31:0] data_in, output reg write, addr, output stop, output reg memory_full);
 
 parameter state_1 = 2'b00;
 parameter state_2 = 2'b01; 
