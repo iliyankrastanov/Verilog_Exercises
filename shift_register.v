@@ -21,11 +21,12 @@ assign data_out = shift_reg;
 
   always @(valid_in)
     begin
-	    if (valid_in)
-		    shift_reg <= shift_reg + 1;
+	    if (!valid_in)
+		    shift_reg <= 32'b0;
+		    
 		  
 	    else
-		     shift_reg <= 32'b0;
+		     shift_reg <= shift_reg + 1;
         end
 wire valid_fifo;
 assign valid_fifo = {4{shift_reg}};
