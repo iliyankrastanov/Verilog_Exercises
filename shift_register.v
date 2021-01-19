@@ -1,5 +1,5 @@
 
-module shift_register(data_out,valid_fifo data_in, valid_in, clk);
+module shift_register(data_out,valid_fifo, data_in, valid_in, clk);
 
   input clk;
   input [7:0] data_in;
