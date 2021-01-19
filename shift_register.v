@@ -8,7 +8,7 @@ module shift_register(data_out,valid_fifo data_in, valid_in, clk);
   output valid_fifo;
 
   reg[31:0] shift_reg;
-
+  reg[31:0] shift_count;
 initial shift_reg = 32'b0;
   always@(valid_in)
 begin
@@ -22,12 +22,12 @@ assign data_out = shift_reg;
   always @(valid_in)
     begin
 	    if (!valid_in)
-		    shift_reg <= 32'b0;
+		    shift_count <= 32'b0;
 		    
 		  
 	    else
-		     shift_reg <= shift_reg + 1;
+		     shift_count <= shift_reg + 1;
         end
 wire valid_fifo;
-assign valid_fifo = {4{shift_reg}};
+	assign valid_fifo = {4{shift_count}};
 endmodule
