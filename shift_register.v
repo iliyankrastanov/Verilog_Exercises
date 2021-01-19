@@ -23,5 +23,6 @@ assign data_out = shift_reg;
     begin
 				shift_reg <= shift_reg + 1;
         end
-  assign valid_fifo = {4{shift_reg}};
+wire valid_fifo;
+assign valid_fifo = {4{shift_reg}};
 endmodule
