@@ -1,0 +1,14 @@
+https://www.edaplayground.com/x/LyAz - D Latch
+
+https://www.edaplayground.com/x/kF3Z - D FF
+
+
+https://www.edaplayground.com/x/8YHf - SR Latch
+
+https://www.edaplayground.com/x/8YHr - SR FF
+
+
+https://www.edaplayground.com/x/CSBE - JK Latch
+
+https://www.edaplayground.com/x/cg9A - JK FF
+
