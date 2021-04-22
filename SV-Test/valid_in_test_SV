@@ -4,7 +4,7 @@ logic res;
 logic out;
 
 modport dut (input clk, din, res, output out);
-modport tb (input out, output clk, din, res, import monitor);
+modport tb (input clk, out, output din, res, import monitor);
 
 task monitor ();
 while (1) begin
